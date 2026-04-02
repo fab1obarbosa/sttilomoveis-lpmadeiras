@@ -16,6 +16,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+const assetBase = import.meta.env.BASE_URL;
+
 export const whatsappPhone = "5547991190524";
 
 export const socialLinks = {
@@ -76,50 +78,50 @@ export const galleryCategories: GalleryCategory[] = [
     id: "pergolados",
     label: "Pergolados",
     images: [
-      { title: "Pergolado 01", image: "/photos_uploads/1.JPG" },
-      { title: "Pergolado 02", image: "/photos_uploads/2.JPG" },
-      { title: "Pergolado 03", image: "/photos_uploads/3.png" },
-      { title: "Pergolado 04", image: "/photos_uploads/4.JPG" },
+      { title: "Pergolado 01", image: `${assetBase}photos_uploads/1.JPG` },
+      { title: "Pergolado 02", image: `${assetBase}photos_uploads/2.JPG` },
+      { title: "Pergolado 03", image: `${assetBase}photos_uploads/3.png` },
+      { title: "Pergolado 04", image: `${assetBase}photos_uploads/4.JPG` },
     ],
   },
   {
     id: "decks",
     label: "Decks",
     images: [
-      { title: "Deck 01", image: "/photos_uploads/5.png" },
-      { title: "Deck 02", image: "/photos_uploads/6.JPG" },
-      { title: "Deck 03", image: "/photos_uploads/7.jpg" },
-      { title: "Deck 04", image: "/photos_uploads/8.jpg" },
+      { title: "Deck 01", image: `${assetBase}photos_uploads/5.png` },
+      { title: "Deck 02", image: `${assetBase}photos_uploads/6.JPG` },
+      { title: "Deck 03", image: `${assetBase}photos_uploads/7.jpg` },
+      { title: "Deck 04", image: `${assetBase}photos_uploads/8.jpg` },
     ],
   },
   {
     id: "cercas",
     label: "Cercas",
     images: [
-      { title: "Cerca 01", image: "/photos_uploads/9.JPG" },
-      { title: "Cerca 02", image: "/photos_uploads/10.JPG" },
-      { title: "Cerca 03", image: "/photos_uploads/11.JPG" },
-      { title: "Cerca 04", image: "/photos_uploads/12.JPG" },
+      { title: "Cerca 01", image: `${assetBase}photos_uploads/9.JPG` },
+      { title: "Cerca 02", image: `${assetBase}photos_uploads/10.JPG` },
+      { title: "Cerca 03", image: `${assetBase}photos_uploads/11.JPG` },
+      { title: "Cerca 04", image: `${assetBase}photos_uploads/12.JPG` },
     ],
   },
   {
     id: "spas",
     label: "Spas",
     images: [
-      { title: "Spa 01", image: "/photos_uploads/13.jpg" },
-      { title: "Spa 02", image: "/photos_uploads/14.png" },
-      { title: "Spa 03", image: "/photos_uploads/15.jpg" },
-      { title: "Spa 04", image: "/photos_uploads/16.JPG" },
+      { title: "Spa 01", image: `${assetBase}photos_uploads/13.jpg` },
+      { title: "Spa 02", image: `${assetBase}photos_uploads/14.png` },
+      { title: "Spa 03", image: `${assetBase}photos_uploads/15.jpg` },
+      { title: "Spa 04", image: `${assetBase}photos_uploads/16.JPG` },
     ],
   },
   {
     id: "personalizados",
     label: "Projetos Personalizados",
     images: [
-      { title: "Projeto Personalizado 01", image: "/photos_uploads/17.png" },
-      { title: "Projeto Personalizado 02", image: "/photos_uploads/18.png" },
-      { title: "Projeto Personalizado 03", image: "/photos_uploads/19.jpg" },
-      { title: "Projeto Personalizado 04", image: "/photos_uploads/20.jfif" },
+      { title: "Projeto Personalizado 01", image: `${assetBase}photos_uploads/17.png` },
+      { title: "Projeto Personalizado 02", image: `${assetBase}photos_uploads/18.png` },
+      { title: "Projeto Personalizado 03", image: `${assetBase}photos_uploads/19.jpg` },
+      { title: "Projeto Personalizado 04", image: `${assetBase}photos_uploads/20.jfif` },
     ],
   },
 ];

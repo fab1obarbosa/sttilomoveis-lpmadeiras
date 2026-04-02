@@ -3,8 +3,9 @@ import { ArrowRight } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 
-const heroImage = "/photos_uploads/mainimage.jpg";
-const logoImage = "/photos_uploads/logomain.png";
+const assetBase = import.meta.env.BASE_URL;
+const heroImage = `${assetBase}photos_uploads/mainimage.jpg`;
+const logoImage = `${assetBase}photos_uploads/logomain.png`;
 
 export const Hero = () => {
   return (

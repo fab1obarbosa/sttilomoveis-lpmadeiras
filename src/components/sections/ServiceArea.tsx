@@ -3,7 +3,7 @@ import { MapPin } from "lucide-react";
 
 import { SectionIntro } from "@/components/SectionIntro";
 
-const mapImage = "/photos_uploads/mapa.png";
+const mapImage = `${import.meta.env.BASE_URL}photos_uploads/mapa.png`;
 
 const serviceCities = [
   "Porto Belo",
