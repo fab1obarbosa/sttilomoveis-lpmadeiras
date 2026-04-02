@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 221 57% 8%;
+    --foreground: 0 0% 100%;
+    --card: 221 40% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 221 40% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 25 100% 58%;
+    --primary-foreground: 221 57% 8%;
+    --secondary: 219 31% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 24% 18%;
+    --muted-foreground: 217 19% 72%;
+    --accent: 25 100% 58%;
+    --accent-foreground: 221 57% 8%;
+    --destructive: 0 74% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 219 28% 22%;
+    --input: 219 28% 22%;
+    --ring: 25 100% 58%;
+    --radius: 1rem;
+    --hero-gradient: linear-gradient(145deg, hsl(222 59% 9%) 0%, hsl(219 54% 12%) 52%, hsl(216 48% 15%) 100%);
+    --section-soft-gradient: linear-gradient(180deg, hsl(220 52% 11%) 0%, hsl(221 48% 12%) 100%);
+    --section-deep-gradient: linear-gradient(180deg, hsl(222 57% 8%) 0%, hsl(221 53% 10%) 100%);
+    --section-contrast-gradient: linear-gradient(180deg, hsl(219 48% 13%) 0%, hsl(221 46% 11%) 100%);
+    --panel-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+    --panel-soft-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+    --premium-shadow: 0 22px 60px -34px rgba(0, 0, 0, 0.74);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 221 57% 8%;
+    --foreground: 0 0% 100%;
+    --card: 221 40% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 221 40% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 25 100% 58%;
+    --primary-foreground: 221 57% 8%;
+    --secondary: 219 31% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 24% 18%;
+    --muted-foreground: 217 19% 72%;
+    --accent: 25 100% 58%;
+    --accent-foreground: 221 57% 8%;
+    --destructive: 0 74% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 219 28% 22%;
+    --input: 219 28% 22%;
+    --ring: 25 100% 58%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(255, 255, 255, 0.045), transparent 22%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 30%);
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .hero-section {
+    background: var(--hero-gradient);
+  }
+
+  .section-shell {
+    @apply relative py-14 md:py-16;
+  }
+
+  .section-soft {
+    background: var(--section-soft-gradient);
+  }
+
+  .section-deep {
+    background: var(--section-deep-gradient);
+  }
+
+  .section-contrast {
+    background: var(--section-contrast-gradient);
+  }
+
+  .premium-card {
+    background: var(--panel-gradient);
+    box-shadow: var(--premium-shadow);
+    @apply border border-white/10 backdrop-blur-xl;
+  }
+
+  .premium-card-soft {
+    background: var(--panel-soft-gradient);
+    box-shadow: var(--premium-shadow);
+    @apply border border-white/10 backdrop-blur-xl;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-primary;
+  }
+
+  .map-pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs font-medium text-white shadow-[0_14px_30px_-20px_rgba(0,0,0,0.75)] backdrop-blur;
+  }
+
+  .map-pill-primary {
+    @apply border-primary/35 bg-primary text-slate-950;
+  }
+
+  .map-drift-a {
+    animation: map-drift-a 10s ease-in-out infinite;
+  }
+
+  .map-drift-b {
+    animation: map-drift-b 12s ease-in-out infinite;
+  }
+
+  .map-drift-c {
+    animation: map-drift-c 14s ease-in-out infinite;
+  }
+
+  .varnish-marquee {
+    @apply overflow-hidden;
+  }
+
+  .varnish-row {
+    display: flex;
+    width: max-content;
+    gap: 0.9rem;
+  }
+
+  .varnish-card {
+    flex: 0 0 calc(50vw - 1.55rem);
+    max-width: 11rem;
+  }
+
+  .varnish-row-forward {
+    animation: varnish-marquee-forward 26s linear infinite;
+  }
+
+  .varnish-row-reverse {
+    animation: varnish-marquee-reverse 28s linear infinite;
+  }
+}
+
+@keyframes map-drift-a {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0);
+  }
+  25% {
+    transform: translate3d(10px, -7px, 0);
+  }
+  50% {
+    transform: translate3d(16px, 3px, 0);
+  }
+  75% {
+    transform: translate3d(6px, 11px, 0);
+  }
+}
+
+@keyframes map-drift-b {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0);
+  }
+  20% {
+    transform: translate3d(-8px, 7px, 0);
+  }
+  45% {
+    transform: translate3d(-15px, -4px, 0);
+  }
+  70% {
+    transform: translate3d(-4px, -12px, 0);
+  }
+  90% {
+    transform: translate3d(5px, -6px, 0);
+  }
+}
+
+@keyframes map-drift-c {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0);
+  }
+  22% {
+    transform: translate3d(7px, 10px, 0);
+  }
+  48% {
+    transform: translate3d(-10px, 13px, 0);
+  }
+  72% {
+    transform: translate3d(-13px, -2px, 0);
+  }
+  90% {
+    transform: translate3d(3px, -11px, 0);
+  }
+}
+
+@keyframes varnish-marquee-forward {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes varnish-marquee-reverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
