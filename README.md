@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sttilo Moveis
 
 Landing page institucional da Sttilo Moveis para apresentacao de projetos em madeira, geracao de contatos via WhatsApp e exibicao de portfolio.
