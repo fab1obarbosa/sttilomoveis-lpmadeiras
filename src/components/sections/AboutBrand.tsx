@@ -1,4 +1,4 @@
-const aboutImage = `${import.meta.env.BASE_URL}photos_uploads/aboutyou.png`;
+﻿const aboutImage = `${import.meta.env.BASE_URL}photos_uploads/aboutyou.jpg`;
 
 export const AboutBrand = () => {
   return (

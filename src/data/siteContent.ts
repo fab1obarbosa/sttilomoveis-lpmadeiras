@@ -1,4 +1,4 @@
-import {
+﻿import {
   BadgeCheck,
   Fence,
   GalleryVerticalEnd,
@@ -51,9 +51,9 @@ export const services: ServiceItem[] = [
     icon: Fence,
   },
   {
-    title: "Spas e \u00c1reas de Relaxamento",
+    title: "Acabamento de Spas e Banheiras",
     description:
-      "Ambientes planejados para conforto, resist\u00eancia \u00e0 rotina externa e sofistica\u00e7\u00e3o visual.",
+      "Revestimentos e acabamentos planejados para spas e banheiras com visual sofisticado, resist\u00eancia e acabamento profissional.",
     icon: Waves,
   },
   {
@@ -63,9 +63,9 @@ export const services: ServiceItem[] = [
     icon: Hammer,
   },
   {
-    title: "\u00c1reas Internas e Externas",
+    title: "Ripados Internos e Externos",
     description:
-      "Integra\u00e7\u00e3o entre materiais, tonalidades e layout para transformar o seu espa\u00e7o por completo.",
+      "Ripados sob medida para ambientes internos e externos, valorizando paredes, fachadas e detalhes decorativos com eleg\u00e2ncia.",
     icon: Home,
   },
 ];
@@ -106,12 +106,22 @@ export const galleryCategories: GalleryCategory[] = [
   },
   {
     id: "spas",
-    label: "Spas",
+    label: "Acabamentos para Spas",
     images: [
       { title: "Spa 01", image: `${assetBase}photos_uploads/13.jpg` },
-      { title: "Spa 02", image: `${assetBase}photos_uploads/14.png` },
+      { title: "Spa 02", image: `${assetBase}photos_uploads/14.jpg` },
       { title: "Spa 03", image: `${assetBase}photos_uploads/15.jpg` },
       { title: "Spa 04", image: `${assetBase}photos_uploads/16.JPG` },
+    ],
+  },
+  {
+    id: "ripados",
+    label: "Ripados",
+    images: [
+      { title: "Ripado 01", image: `${assetBase}photos_uploads/19.jpg` },
+      { title: "Ripado 02", image: `${assetBase}photos_uploads/21.jpg` },
+      { title: "Ripado 03", image: `${assetBase}photos_uploads/22.jpg` },
+      { title: "Ripado 04", image: `${assetBase}photos_uploads/23.jpg` },
     ],
   },
   {
@@ -120,7 +130,7 @@ export const galleryCategories: GalleryCategory[] = [
     images: [
       { title: "Projeto Personalizado 01", image: `${assetBase}photos_uploads/17.png` },
       { title: "Projeto Personalizado 02", image: `${assetBase}photos_uploads/18.png` },
-      { title: "Projeto Personalizado 03", image: `${assetBase}photos_uploads/19.jpg` },
+      { title: "Projeto Personalizado 03", image: `${assetBase}photos_uploads/24.jpg` },
       { title: "Projeto Personalizado 04", image: `${assetBase}photos_uploads/20.jfif` },
     ],
   },
@@ -277,3 +287,6 @@ export const varnishOptions = [
   { name: "Canela", hex: "#a36a3f" },
   { name: "UV Gold / Semitransparente", hex: "#d4aa63" },
 ];
+
+
+

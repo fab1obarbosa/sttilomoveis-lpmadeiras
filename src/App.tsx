@@ -8,12 +8,15 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const isDev = process.env.NODE_ENV === 'development';
+const basename = isDev ? "/" : "/sttilomoveis-lpmadeiras";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/sttilomoveis-lpmadeiras">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
