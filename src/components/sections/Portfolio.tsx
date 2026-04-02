@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ExternalLink, Instagram } from "lucide-react";
 
 import { SectionIntro } from "@/components/SectionIntro";
@@ -8,19 +8,6 @@ import { galleryCategories, socialLinks } from "@/data/siteContent";
 
 export const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState(galleryCategories[0]);
-
-  useEffect(() => {
-    const seen = new Set<string>();
-
-    galleryCategories.forEach((category) => {
-      category.images.forEach((item) => {
-        if (seen.has(item.image)) return;
-        seen.add(item.image);
-        const image = new Image();
-        image.src = item.image;
-      });
-    });
-  }, []);
 
   return (
     <section className="section-shell section-deep pt-10 md:pt-12" id="projetos">

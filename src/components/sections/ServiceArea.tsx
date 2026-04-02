@@ -56,6 +56,8 @@ export const ServiceArea = () => {
                 <img
                   src={mapImage}
                   alt="Mapa de atendimento da Sttilo"
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain opacity-[0.98] drop-shadow-[0_30px_56px_rgba(0,0,0,0.45)]"
                 />
               </div>

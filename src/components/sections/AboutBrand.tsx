@@ -18,6 +18,8 @@ export const AboutBrand = () => {
                 <img
                   src={aboutImage}
                   alt="Projeto Sttilo Móveis em execução"
+                  loading="lazy"
+                  decoding="async"
                   className="h-[440px] w-full rounded-[1.35rem] object-cover object-[center_18%] md:h-[620px] lg:h-[700px]"
                 />
               </div>
